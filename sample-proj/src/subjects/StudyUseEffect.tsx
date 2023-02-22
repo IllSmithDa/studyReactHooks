@@ -44,14 +44,14 @@ function StudyUseEffect() {
       {
         names.map((name) => {
           return (
-            <div>
-              <button className="border border-black-400" onClick={() => { getSelectedData(name) }}>{name}</button>
+            <div key={name}>
+              <button className="px-5 py-3 text-neutral-500 bg-cyan-400 rounded-lg my-5" onClick={() => { getSelectedData(name) }}>{name}</button>
             </div>
           )
         })
       }
-      <div>{JSON.stringify(detailedName)}</div>
-      <div>
+      <div><b>{JSON.stringify(detailedName)}</b></div>
+      <div className="my-10">
         <StopWatch />
       </div>
     </div>
